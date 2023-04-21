@@ -1,0 +1,17 @@
+.image-wrapper {
+    position: relative; /* position the wrapper element relative to its container */
+    width: 100%; /* set the width of the wrapper to 100% */
+    height: auto; /* let the height adjust automatically based on the aspect ratio of the image */
+  }
+  
+  .image-wrapper::after {
+    content: ""; /* create a pseudo-element to apply the gradient */
+    position: absolute; /* position the pseudo-element absolutely within the wrapper */
+    top: 0; /* position the top of the gradient at the top of the wrapper */
+    left: 0; /* position the left side of the gradient at the left of the wrapper */
+    width: 100%; /* set the width of the gradient to 100% */
+    height: 100%; /* set the height of the gradient to 100% */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%); /* define the gradient */
+    mix-blend-mode: multiply; /* use multiply blend mode to darken the image */
+  }
+  
